@@ -1,0 +1,45 @@
+package stepdefs.muratStepdefs;
+
+import driver.Driver;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import page.LocatorsMovita;
+import utils.BaseClass;
+
+public class MovitaLogoStepdefs extends BaseClass implements LocatorsMovita {
+
+   // WebDriver driver= Driver.getDriver();
+   // WebDriverWait wait=Driver.getWait();
+    @Given("user on homepage")
+    public void userOnHomepage() {
+        driver.get("https://www.movita.com.tr/");
+
+    }
+
+    @When("Logo isvisible and clickable")
+    public void logoIsvisibleAndClickable() {
+        visibility(lLogo);
+        wait.until(ExpectedConditions.elementToBeClickable(lLogo));
+
+
+    }
+
+    @And("user clicks The Logo")
+    public void userClicksTheLogo() {
+        click(lLogo);
+    }
+
+    @Then("“Mobil Vasita izleme takip Sistemi” isvisible on page")
+    public void mobilVasitaIzlemeTakipSistemiIsvisibleOnPage() {
+        visibility(lPageYazısı);
+        getScreenShoot("movita");
+
+    }
+
+
+}
