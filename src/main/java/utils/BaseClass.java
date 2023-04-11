@@ -16,6 +16,7 @@ public class BaseClass {
    public WebDriver driver= Driver.getDriver();
     public WebDriverWait wait=Driver.getWait();
 
+
     public void click(By locator){
 
         WebElement element=wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -85,6 +86,13 @@ public class BaseClass {
         try {
             FileUtils.copyFile(source,target);
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static void sleep(long millis){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/java/muratMovita/movitaLogo.feature"},
+        features = {"src/test/java/muratMovita/movitaDropDown.feature"},
         glue = {"stepdefs/muratStepdefs"}
        // tags = "@WishList",
         //plugin = { "pretty",
