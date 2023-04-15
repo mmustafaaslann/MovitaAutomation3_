@@ -96,4 +96,11 @@ public class BaseClass {
             throw new RuntimeException(e);
         }
     }
+    public void hover(WebElement element){
+        new Actions(driver)
+                .moveToElement(element)
+                .build()
+                .perform();
+
+    }
 }

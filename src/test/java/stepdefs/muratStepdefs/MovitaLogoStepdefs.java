@@ -13,8 +13,7 @@ import utils.BaseClass;
 
 public class MovitaLogoStepdefs extends BaseClass implements LocatorsMovita {
 
-   // WebDriver driver= Driver.getDriver();
-   // WebDriverWait wait=Driver.getWait();
+
     @Given("user on homepage")
     public void userOnHomepage() {
         driver.get(url);
