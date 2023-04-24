@@ -1,4 +1,4 @@
-package page;
+package driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,6 +15,7 @@ public interface LocatorsMovita {
     By lTitleEnglish=By.xpath("//div[@class='tp-mask-wrap']//div[contains(text(),'Mobile')]");
     By lTitleTurkish=By.xpath("//div[@class='tp-mask-wrap']//div[contains(text(),'Mobil')]");
     By lAnaSayfaButton=By.xpath("//div[text()='Ana Sayfa']");
+    By lKurumsamButton=By.xpath("//div[text()='Kurumsal']");
 
 
 }

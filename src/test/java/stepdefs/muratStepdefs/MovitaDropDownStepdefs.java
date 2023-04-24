@@ -5,8 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import page.LocatorsMovita;
-import utils.BaseClass;
+import driver.LocatorsMovita;
+import driver.BaseClass;
 
 public class MovitaDropDownStepdefs extends BaseClass implements LocatorsMovita {
     @Given("go to url")
