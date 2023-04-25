@@ -8,10 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import page.LocatorsMovita;
-import utils.BaseClass;
-
-import java.awt.*;
+import driver.BaseClass;
+import driver.LocatorsMovita;
 
 public class MovitaAnaSayfaStepdefs extends BaseClass implements LocatorsMovita {
     @Given("Go to Url")

@@ -5,9 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/java/features"},
-        glue = {"stepdefs/muratStepdefs"}
-       // tags = "@WishList",
+        features = {"src/test/java/muratMovita"},
+        glue = {"stepdefs"}
+       // tags = "@test1"
         //plugin = { "pretty",
              //   "json:test-output/cucumber-reports/cucumber.json",
                // "html:test-output/cucumber-reports/cucumberreport.html",
