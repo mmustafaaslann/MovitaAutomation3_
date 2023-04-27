@@ -14,6 +14,7 @@ public class MovitaUrunlerCozumlerStepdefs extends BaseClass implements Locators
     String afterColor;
     @Given("users navigate too {string}")
     public void usersNavigateToo(String url) {
+
         driver.get(url);
     }
 
@@ -46,6 +47,7 @@ public class MovitaUrunlerCozumlerStepdefs extends BaseClass implements Locators
 
         String sourcePage=driver.getPageSource();
         Assert.assertTrue(sourcePage.contains(text));
+        getScreenShoot("Ürünler Çözünler sonuç");
 
 
     }
