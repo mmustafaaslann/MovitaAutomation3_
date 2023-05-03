@@ -127,4 +127,31 @@ public class MustafaStepdefs extends BaseMovita {
         assertChangeColorMainTitle(anaBaslik);
         assertChangeColorSubTitle(altBaslik);
     }
+
+
+    @When(": kullanıcı cozumler {string} üzerine gelir")
+    public void kullanıcıCozumlerÜzerineGelir(String anaBaslik) {
+        hoverOver(homePageMenu(anaBaslik));
+    }
+
+    @And(": cozumler seceneklerinde hover over yapar {string}")
+    public void cozumlerSeceneklerindeHoverOverYapar(String altBaslik) {
+        hoverOver(MainSubTitle(altBaslik));
+    }
+
+    @And(": kullanıcı alt basliklara tiklarr {string}")
+    public void kullanıcıAltBasliklaraTiklarr(String subTitle) {
+        click(MainSubTitle(subTitle));
+    }
+
+    @And(": alt basliklar {string} ile görünürr olmalıdırr")
+    public void altBasliklarIleGörünürrOlmalıdırr(String text) {
+        verifyToUrunlerSubtitle(text);
+    }
+
+    @Then(": cozumler  {string} ve   {string} renkleri değişmelidir")
+    public void cozumlerVeRenkleriDeğişmelidir(String anaBaslik, String altBaslik) {
+        assertChangeColorMainTitle(anaBaslik);
+        assertChangeColorSubTitle(altBaslik);
+    }
 }
