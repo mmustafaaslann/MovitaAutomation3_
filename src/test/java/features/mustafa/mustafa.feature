@@ -44,3 +44,21 @@ Feature: HomePage
       | Kurumsal  | Demo Başvrusu     | Demo Başvrusu     | Demo Başvuru                         |
       | Kurumsal  | Çerez Politikası  | Çerez Politikası  | Çerez Politikası                     |
       | Kurumsal  | KVKK              | KVKK              | KİŞİSEL VERİLERİN İŞLENME POLİTİKASI |
+
+  @Urunler
+  Scenario Outline:ürünler
+    When :  kullanici urunler "<AnaBaslik>" üzerine gelir
+    And  :urunler seceneklerinde  hover over yapar "<AltBaslik>"
+    And  :  kullanıcı alt basliklara tiklar "<Tıkla>"
+    And  :  alt basliklar "<Metin>" ile görünür olmalıdır
+    Then : urunler  "<AnaBaslik>" ve   "<AltBaslik>" renkleri değişmelidir
+
+
+    Examples:
+      | AnaBaslik | AltBaslik            | Tıkla       | Metin                |
+      | Ürünler   | MNVR                 | MNVR                 | MNVR                 |
+      | Ürünler   | MNVR Pro             | MNVR Pro             | MNVR Pro             |
+      | Ürünler   | MNVR AI              | MNVR AI              | MNVR AI              |
+      | Ürünler   | Araç Takip Cihazı    | Araç Takip Cihazı    | Araç Takip Cihazı    |
+      | Ürünler   | Cam Tracker          | Cam Tracker          | Cam Tracker          |
+      | Ürünler   | Akıllı Direk Sistemi | Akıllı Direk Sistemi | Akıllı Direk Sistemi |
