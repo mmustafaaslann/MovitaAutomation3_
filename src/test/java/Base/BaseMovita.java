@@ -2,7 +2,6 @@ package Base;
 
 import Locaators.Locator;
 
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -174,7 +173,7 @@ public class BaseMovita implements Locator {
         wait.until(ExpectedConditions.visibilityOfElementLocated(lSubTitleVerify));
     }
     public void visibleVerifyWithSubtitle(String text) {
-        By lSubTitleVerify=By.xpath("//div[@class='col-md-3']//img");
+        By lSubTitleVerify=By.xpath("//h1[contains(.,'"+text+"')]");
         wait.until(ExpectedConditions.presenceOfElementLocated(lSubTitleVerify));
     }
 }
