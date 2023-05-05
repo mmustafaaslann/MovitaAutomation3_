@@ -80,7 +80,7 @@
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.10.1</version>
+
         </dependency>
 
         <!-- for YAML -->
@@ -111,6 +111,7 @@
         </dependency>
 
     </dependencies>
+
 
     <build>
         <plugins>
