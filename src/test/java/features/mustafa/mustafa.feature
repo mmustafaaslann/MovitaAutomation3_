@@ -51,7 +51,7 @@ Feature: HomePage
     And  :urunler seceneklerinde  hover over yapar "<AltBaslIk>"
     And  :  kullanıcı alt basliklara tiklar "<Tıkla>"
     And  :  alt basliklar "<Metin>" ile görünür olmalıdır
-    Then : urunler  "<AnaBaslik>" ve   "<AltBaslik>" renkleri değişmelidir
+    Then : urunler "<AnaBaslIk>" ve   "<AltBaslIk>" renkleri değişmelidir
 
 
     Examples:
@@ -65,7 +65,7 @@ Feature: HomePage
 
 
   @Cozumler
-  Scenario Outline: ÇÖZÜMLER
+  Scenario Outline: çözümler
     When : kullanıcı cozumler "<AnaBaslIkk>" üzerine gelir
     And  : cozumler seceneklerinde hover over yapar "<AltBaslIkk>"
     And  : kullanıcı alt basliklara tiklarr "<Tıklarlar>"
@@ -83,4 +83,12 @@ Feature: HomePage
       | Çözümler   | Güvenlik Kuvvetleri Araçları | Güvenlik Kuvvetleri Araçları | Güvenlik Kuvvetleri Araçları |
       | Çözümler   | Yük ve Eşya Taşıyan Araçlar  | Yük ve Eşya Taşıyan Araçlar  | Yük ve Eşya Taşıyan Araçlar  |
       | Çözümler   | Belediye ve Halk Otobüsleri  | Belediye ve Halk Otobüsleri  | Belediye ve Halk Otobüsleri  |
+
+Scenario: Araç Bazlı Rapor Menüsü
+  When  kullanıcı enter düğmesini tıklar
+  And : kullanıcı girer <kullanıcıadı> ve <sifre>
+   |kullanıcıadı|demomovita|
+   |sifre       |1192movita|
+
+  And : kullanıcı tıklar giris yap butonuna
 

@@ -173,7 +173,46 @@ public class BaseMovita implements Locator {
         wait.until(ExpectedConditions.visibilityOfElementLocated(lSubTitleVerify));
     }
     public void visibleVerifyWithSubtitle(String text) {
-        By lSubTitleVerify=By.xpath("//h1[contains(.,'"+text+"')]");
+        By lSubTitleVerify=By.xpath("//div[@class='col-md-3']//img");;
         wait.until(ExpectedConditions.presenceOfElementLocated(lSubTitleVerify));
     }
-}
+    public By loginFormİnput(String text){
+        By lLoginForm = By.xpath("//form[@class='needs-validation mb-2 mt-10']//input[@id='"+text+"']");
+        // WebElement element = driver.findElement(lLoginForm);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lLoginForm));
+        return lLoginForm;
+
+    }
+    public void sendKeys(WebElement element, String text) {
+        //wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+
+        wait.until(driver1 -> {
+            try {
+                element.clear();
+                element.sendKeys(text);
+                return true;
+            } catch (java.lang.Exception e1) {
+                try {
+                    element.clear();
+                    new Actions(driver1).moveToElement(element).sendKeys(text).perform();
+                    return true;
+                } catch (java.lang.Exception e2) {
+                    try {
+                        element.clear();
+                        ((JavascriptExecutor) driver1).executeScript("arguments[0].value='" + text + "'", element);
+                        return true;
+                    } catch (java.lang.Exception e3) {
+                        return false;
+                    }
+                }
+            }
+        });
+    }
+
+    public void sendKeys(By locator, String text) {
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        sendKeys(element, text);
+    }
+    }
+
+

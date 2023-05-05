@@ -16,6 +16,8 @@ public interface Locator {
     By lAnaSayfa = By.xpath("//ul[@class='menu-container']//div[text()='Ana Sayfa']");
     By lSubMenuKurumsal=By.xpath("(//ul[@class='sub-menu-container'])[1]//div");
 
+    By lLoginFormLoginButton=By.xpath("//button[@type='submit']");
+
     WebElement homePageMenu(String text);
 
 

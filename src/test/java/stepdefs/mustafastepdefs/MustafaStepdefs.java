@@ -1,6 +1,7 @@
 package stepdefs.mustafastepdefs;
 
 import Base.BaseMovita;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+
+import java.util.Map;
 
 public class MustafaStepdefs extends BaseMovita {
     @Given("kullanıcılar şuraya gider:{string}")
@@ -122,11 +125,6 @@ public class MustafaStepdefs extends BaseMovita {
         verifyToUrunlerSubtitle(text);
     }
 
-    @Then(": urunler  {string} ve   {string} renkleri değişmelidir")
-    public void urunlerVeRenkleriDeğişmelidir(String anaBaslik, String altBaslik) {
-        assertChangeColorMainTitle(anaBaslik);
-        assertChangeColorSubTitle(altBaslik);
-    }
 
 
     @When(": kullanıcı cozumler {string} üzerine gelir")
@@ -146,12 +144,22 @@ public class MustafaStepdefs extends BaseMovita {
 
     @And(": alt basliklar {string} ile görünürr olmalıdırr")
     public void altBasliklarIleGörünürrOlmalıdırr(String text) {
-        verifyToUrunlerSubtitle(text);
+     visibleVerifyWithSubtitleCozumler(text);
     }
+
+
 
     @Then(": cozumler  {string} ve   {string} renkleri değişmelidir")
     public void cozumlerVeRenkleriDeğişmelidir(String anaBaslik, String altBaslik) {
         assertChangeColorMainTitle(anaBaslik);
         assertChangeColorSubTitle(altBaslik);
+
     }
+
+
+
+
+
+
+
 }
