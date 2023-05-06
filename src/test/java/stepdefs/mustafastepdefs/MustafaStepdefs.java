@@ -158,8 +158,21 @@ public class MustafaStepdefs extends BaseMovita {
 
 
 
+    @And("kullanıcı gönderir  <username> ve <password>")
+    public void kullanıcıGönderirUsernameVePassword(DataTable table) {
+        Map<String,String> map=table.asMap();
+        String username = map.get("username");
+        String password = map.get("password");
+        sendKeys(loginFormİnput("username"),username);
+        sendKeys(loginFormİnput("password"),password);
+    }
 
+    @And("kullanıcı oturum açma formu oturum açma düğmesini tıklar")
+    public void kullanıcıOturumAçmaFormuOturumAçmaDüğmesiniTıklar() {
+        click(lLoginFormSubmitButton);
+    }
 
-
-
+    @And("harita ile doğrula")
+    public void haritaIleDoğrula() {
+    }
 }

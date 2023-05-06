@@ -84,11 +84,12 @@ Feature: HomePage
       | Çözümler   | Yük ve Eşya Taşıyan Araçlar  | Yük ve Eşya Taşıyan Araçlar  | Yük ve Eşya Taşıyan Araçlar  |
       | Çözümler   | Belediye ve Halk Otobüsleri  | Belediye ve Halk Otobüsleri  | Belediye ve Halk Otobüsleri  |
 
-Scenario: Araç Bazlı Rapor Menüsü
-  When  kullanıcı enter düğmesini tıklar
-  And : kullanıcı girer <kullanıcıadı> ve <sifre>
-   |kullanıcıadı|demomovita|
-   |sifre       |1192movita|
-
-  And : kullanıcı tıklar giris yap butonuna
+  @GirişFormu
+  Scenario: Arac Bazli Rapor Menusu
+    When kullanıcı enter düğmesini tıklar
+    And kullanıcı gönderir  <username> ve <password>
+      |username|demomovita|
+      |password|1192movita|
+    And kullanıcı oturum açma formu oturum açma düğmesini tıklar
+    And harita ile doğrula
 

@@ -213,6 +213,12 @@ public class BaseMovita implements Locator {
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         sendKeys(element, text);
     }
+    public By loginFormInput(String text){
+        By lLoginForm = By.xpath("//form[@class='needs-validation mb-2 mt-10']//input[@id='"+text+"']");
+        WebElement element =driver.findElement(lLoginForm);
+        return lLoginForm;
+    }
+
     }
 
 
