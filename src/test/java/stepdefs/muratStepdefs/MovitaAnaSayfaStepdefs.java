@@ -46,4 +46,7 @@ public class MovitaAnaSayfaStepdefs extends BaseClass implements LocatorsMovita 
         visibility(lPageYazısı);
 
     }
+
+
+
 }
