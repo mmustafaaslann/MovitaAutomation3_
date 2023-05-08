@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/java/features/muratMovita"},
+        features = {"src/test/java/features/muratMovita/movitaLoginPage.feature"},
         glue = {"stepdefs"}
        // tags = "@test1"
         //plugin = { "pretty",
